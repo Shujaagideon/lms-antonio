@@ -9,7 +9,6 @@ datasource db {
 // https://www.prisma.io/docs/concepts/components/prisma-client/full-text-search
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 model Course {
@@ -33,7 +32,6 @@ model Course {
 
   @@index([categoryId])
   // This makes our courses title searchable
-  @@fulltext([title])
 }
 
 model Category {
